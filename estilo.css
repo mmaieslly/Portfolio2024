@@ -19,13 +19,11 @@
   list-style: none;
 }
 
-a:-webkit-any-link {
-  /*Tirando o efeito do link*/
+a:-webkit-any-link {/*Tirando o efeito do link*/
   color: var(--texto-escuro);
 }
 
-body {
-  /*Definindo cor e tamanho para o body*/
+body {/*Definindo cor e tamanho para o body*/
   background-color: var(--cor-secundaria);
   height: 100vh;
 }
@@ -49,15 +47,16 @@ body {
   color: var(--cor-clara);
 }
 
+
 /*Estilos do Cabeçalho*/
-header {
-  /*Definindo cor e padding do cabeçario*/
+header {/*Definindo cor e padding do cabeçario*/
   background-color: var(--cor-clara);
   padding: 1% 11.7% 1% 11.7%;
+  position: relative;
+  z-index: auto;
 }
 
-.container-flex {
-  /*Criando container com flexbox para separar o menu da logo*/
+.container-flex {/*Criando container com flexbox para separar o menu da logo*/
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -66,11 +65,7 @@ header {
 /*Estilizando logo*/
 .logo a {
   color: var(--cor-primaria);
-  font-size: clamp(
-    0.1em,
-    0.8em + 1vw,
-    3.5em
-  ); /*função clamp para adaptar o tamanho da letra conforme o tamanho da tela*/
+  font-size: clamp(0.1em, 0.8em + 1vw, 3.5em); /*função clamp para adaptar o tamanho da letra conforme o tamanho da tela*/
   font-weight: bold;
 }
 
@@ -103,9 +98,9 @@ nav ul li a:hover {
   transition: 0.3s;
 }
 
+
 /*Estilizando MAIN do index*/
-.container-grid {
-  /*Estilo tambem usado na MAIN da pag CONTATO*/
+.container-grid {/*Estilo tambem usado na MAIN da pag CONTATO*/
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 92vh;
@@ -142,8 +137,7 @@ nav ul li a:hover {
   margin-right: 10%;
 }
 
-.foto {
-  /*Estilo tambem usado na MAIN da pag CONTATO*/
+.foto {/*Estilo tambem usado na MAIN da pag CONTATO*/
   display: flex;
   justify-content: center;
 }
@@ -154,6 +148,8 @@ nav ul li a:hover {
   border: #040404 1px solid;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
+
+
 
 /*Estilizando MAIN da pag SOBRE*/
 .main-sobre {
@@ -187,10 +183,10 @@ nav ul li a:hover {
   margin: 0% 8% 2% 8%;
 }
 
+
+
 /*Estilização MAIN da pag FORMAÇÃO*/
-.curriculo,
-.portfolio {
-  /*estilo tambem usado na pag PORTFOLIO*/
+.curriculo, .portfolio {/*estilo tambem usado na pag PORTFOLIO*/
   margin-left: auto;
   margin-right: auto;
   width: 80%;
@@ -220,6 +216,8 @@ nav ul li a:hover {
   margin: auto;
   display: block;
 }
+
+
 
 /*Estilizando MAIN da pag PORTFOLIO*/
 .main-portfolio {
@@ -280,7 +278,25 @@ nav ul li a:hover {
   border-radius: 10%;
 }
 
+
+
 /*Estilizando MAIN da pag CONTATO*/
+.contate-me {
+  margin-top: 60px;
+  font-size: 30px;
+  text-align: justify;
+}
+
+.divcontato {
+  padding-right: 20%;
+}
+
+.contate-me img {
+  height: 30px;
+  width: 30px;
+}
+
+
 .formulario {
   max-width: 600px;
   background-color: var(--texto-escuro);
@@ -318,20 +334,9 @@ input[type="submit"]:hover {
   background-color: var(--cor-primaria-escura);
 }
 
-.contate-me {
-  margin-top: 60px;
-  font-size: 30px;
-  text-align: justify;
-}
 
-.divcontato {
-  padding-right: 20%;
-}
 
-.contate-me img {
-  height: 30px;
-  width: 30px;
-}
+
 
 /* Adaptação para aparelhos bem pequenos (650px ou menos) */
 @media only screen and (max-width: 650px) {
@@ -382,3 +387,4 @@ input[type="submit"]:hover {
     padding: 2%;
   }
 }
+
