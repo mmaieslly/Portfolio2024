@@ -1,0 +1,350 @@
+/*Definindo principais cores que serão usadas, paleta escolhida com base no IMG do INDEX*/
+:root {
+  --cor-primaria: #d96112;
+  --cor-primaria-escura: #a23d0f;
+  --cor-secundaria: #51341f;
+  --texto-escuro: #bda89e;
+  --texto-claro: #ebd1c5;
+  --cor-clara: #1b1c14;
+  --cor-fundo: #040404a0;
+}
+
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+a:-webkit-any-link {/*Tirando o efeito do link*/
+  color: var(--texto-escuro);
+}
+
+body {/*Definindo cor e tamanho para o body*/
+  background-color: var(--cor-secundaria);
+  height: 100vh;
+}
+
+/*Estilizando um botao*/
+.btn {
+  font-weight: bold;
+  letter-spacing: 2.5px;
+  padding: 0.8rem 0.8rem;
+  border: 2px solid var(--cor-primaria);
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--cor-primaria-escura);
+  color: var(--texto-claro);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  margin-right: 3%;
+}
+
+.btn:hover {
+  background-color: var(--cor-primaria);
+  color: var(--cor-clara);
+}
+
+
+/*Estilos do Cabeçalho*/
+header {/*Definindo cor e padding do cabeçario*/
+  background-color: var(--cor-clara);
+  padding: 1% 11.7% 1% 11.7%;
+}
+
+.container-flex {/*Criando container com flexbox para separar o menu da logo*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*Estilizando logo*/
+.logo a {
+  color: var(--cor-primaria);
+  font-size: clamp(0.1em, 0.8em + 1vw, 3.5em); /*função clamp para adaptar o tamanho da letra conforme o tamanho da tela*/
+  font-weight: bold;
+}
+
+/*Estilizando menu*/
+nav {
+  width: 70%;
+}
+
+.menu {
+  display: flex;
+  gap: 5%;
+  justify-content: flex-end;
+}
+
+nav ul li a {
+  color: var(--texto-escuro);
+  font-weight: bold;
+  font-size: clamp(0.1em, 0.8em + 0.8vw, 1.5em);
+}
+
+/*Transições do MENU*/
+.logo a:hover {
+  color: var(--cor-primaria-escura);
+}
+
+nav ul li a:hover {
+  border-top: var(--cor-secundaria) 2px solid;
+  border-bottom: var(--cor-secundaria) 2px solid;
+  color: var(--cor-secundaria);
+  transition: 0.3s;
+}
+
+
+/*Estilizando MAIN do index*/
+.container-grid {/*Estilo tambem usado na MAIN da pag CONTATO*/
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 92vh;
+  place-items: center;
+}
+
+.conteudo-div {
+  padding: 10% 0% 0% 10vw;
+  background-color: var(--cor-fundo);
+  height: 100%;
+  border-right: #a23d0f 2px solid;
+}
+
+.subtitulo {/*Estilo tambem usado na MAIN da pag CONTATO*/
+  letter-spacing: 2px;
+  font-size: clamp(0.9em, 0.4em + 1vw, 1.5em);
+  color: var(--texto-escuro);
+  margin-bottom: 1%;
+}
+
+.titulo {
+  font-size: clamp(1em, 1em + 1vw, 2.5em);
+  font-weight: 400;
+  line-height: 105%;
+  color: var(--texto-claro);
+  margin-bottom: 1%;
+}
+
+.boasvindas {
+  line-height: 99%;
+  font-size: clamp(0.9em, 0.4em + 1vw, 1.5em);
+  color: var(--texto-escuro);
+  margin-bottom: 4%;
+  margin-right: 10%;
+}
+
+.foto {/*Estilo tambem usado na MAIN da pag CONTATO*/
+  display: flex;
+  justify-content: center;
+}
+
+#foto-inicio {
+  width: min(35rem, 90%);
+  border-radius: 150% 50% 50% 50%;
+  border: #040404 1px solid;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/*Estilizando MAIN da pag SOBRE*/
+.main-sobre {
+  height: 100vh;
+  background-image: url(./img/foto3.jpg);
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: auto 100vh;
+  background-color: var(--cor-fundo);
+}
+
+.main-sobre section {
+  text-align: justify;
+  margin-left: 30%;
+  background-color: #04040471;
+  height: 100%;
+}
+
+.nome {
+  font-size: clamp(1em, 1em + 1vw, 2.5em);
+  font-weight: bold;
+  color: var(--cor-primaria-escura);
+  padding-top: 8%;
+  margin: 0% 8% 2% 8%;
+}
+
+.bio {
+  line-height: 99%;
+  font-size: clamp(1em, 0.5em + 1vw, 1.7em);
+  color: var(--texto-escuro);
+  margin: 0% 8% 2% 8%;
+}
+
+
+
+/*Estilização MAIN da pag FORMAÇÃO*/
+.curriculo, .portfolio {/*estilo tambem usado na pag PORTFOLIO*/
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.curriculo h2 {
+  background-color: var(--cor-primaria-escura);
+  text-align: center;
+  color: white;
+}
+
+.cartao {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  background-color: var(--cor-primaria-escura);
+}
+
+.formacao {
+  background-color: var(--texto-claro);
+  padding: 1% 5%;
+  margin-bottom: 5px;
+}
+
+.cartao img {
+  width: 60%;
+  margin: auto;
+  display: block;
+}
+
+
+
+/*Estilizando MAIN da pag PORTFOLIO*/
+.main-portfolio {
+  background-color: var(--cor-fundo);
+}
+
+.projeto {
+  padding: 2%;
+}
+
+.titulo-projeto {
+  color: var(--texto-claro);
+  display: flex;
+  justify-content: space-between;
+}
+
+.titulo-projeto img {
+  height: 30px;
+}
+
+.projeto p {
+  color: var(--texto-escuro);
+  font-size: 25px;
+  padding: 1% 2%;
+}
+
+.img-icon {
+  height: 15px;
+  padding: 2px 80%;
+}
+
+.show {
+  height: 30vh;
+  margin: 3px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.div1-foto {
+  height: 15px;
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to right, #a2360f, #d96112);
+  padding: 0;
+  margin: 0;
+  overflow: hidden; /*Gambiarra para fazer as IMG aparecerem no :HOVER*/
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.div1-foto:hover {
+  height: fit-content;
+  width: 100%;
+  background-image: linear-gradient(to right, #a2360f, #d96112);
+  overflow: visible;
+  transition: 1.5s;
+  border: #d96112 solid 1px;
+  border-radius: 10%;
+}
+
+
+
+/*Estilizando MAIN da pag CONTATO*/
+.contate-me {
+  margin-top: 60px;
+  font-size: 40px;
+  text-align: justify;
+}
+
+.divcontato {
+  padding-right: 20%;
+}
+
+.contate-me img {
+  height: 60px;
+  width: 60px;
+}
+
+
+
+
+
+/* Adaptação para aparelhos bem pequenos (650px ou menos) */
+@media only screen and (max-width: 650px) {
+  .container-flex {
+    display: block;
+  }
+
+  .main-sobre {
+    background-position: center center;
+  }
+
+  .logo,
+  nav,
+  .menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 10px 0px;
+  }
+
+  .container-grid {
+    display: block;
+  }
+
+  .conteudo-div {
+    margin: 0% 0% 15% 0%;
+    padding: 12%;
+  }
+
+  .btn {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    padding: 0.5rem 0.5rem;
+    margin-right: 3%;
+  }
+
+  section {
+    margin-left: 0%;
+    background-color: #0404049a;
+  }
+
+  .nome {
+    padding: 4%;
+    margin: 0% 8% 0% 8%;
+  }
+
+  .bio {
+    padding: 2%;
+  }
+}
+
